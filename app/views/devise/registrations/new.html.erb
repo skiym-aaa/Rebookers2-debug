@@ -23,7 +23,8 @@
     <div class="field">
       <%= f.label :prefecture_code %><br />
       <%= f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :name, :name, include_blank: true %>
-      <!--  -->
+      <!-- JpPrefecture::Prefecture.all 都道府県の一覧を取得 -->
+      <!-- 'include_blank: ture' 先頭にブランクを追加 -->
     </div>
 
     <div class="field">
