@@ -9,20 +9,17 @@ class BookCommentsController < ApplicationController
     @book_comment.save
     if @book_comment.save
       flash[:notice] = "Comment was successfully created."
-      redirect_to book_path(@book)
-    else
-      redirect_to request.referer
     end
   end
 
   def destroy
     @book_comment = BookComment.find(params[:book_id])
+    @book = @book_comment.book
     if @book_comment.user != current_user
       redirect_to request.referer
     end
     @book_comment.destroy
     flash[:notice] = "Comment was successfully deleted."
-    redirect_to request.referer
   end
 
   private

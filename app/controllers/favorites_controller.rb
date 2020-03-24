@@ -5,7 +5,6 @@ class FavoritesController < ApplicationController
     # current_userのfavoriteテーブルの
     # 'book_id'というカラムに'@book.id'という値を入れて生成する。
     favorite.save
-    redirect_to request.referer
   end
 
   def destroy
@@ -14,6 +13,5 @@ class FavoritesController < ApplicationController
     # current_userのfavoriteテーブルから
     # 'book_id'というカラムの'@book.id'という値を探してくる。
     favorite.destroy
-    redirect_to request.referer
   end
 end
