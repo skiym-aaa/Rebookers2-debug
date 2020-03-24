@@ -76,5 +76,7 @@ gem "refile-mini_magick"
 gem 'jquery-rails'
 # Add bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+# Add jp_prefecture
+gem 'jp_prefecture'
 
 
