@@ -1,9 +1,11 @@
 class SearchController < ApplicationController
   def search
     @model = params["search"]["model"]
+    # "search"という名で作成したハッシュの中の"model"(カラム)にあるデータを取得している。
     @content = params["search"]["content"]
     @method = params["search"]["method"]
     @records = search_for(@model, @content, @method)
+    # 下記の"search_for"メソッドで検索結果に合致するレコードを取得している。
   end
 
   private
