@@ -28,6 +28,7 @@ class User < ApplicationRecord
 
   def follow(user_id)
     follower.create(followed_id: user_id)
+    # followed_id:use_idを代入しながらインスタンスを作成
   end
 
   # ユーザーのフォローを外す

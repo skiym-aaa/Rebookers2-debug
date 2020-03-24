@@ -1,6 +1,8 @@
 class RelationshipsController < ApplicationController
   def create
     current_user.follow(params[:user_id])
+    # current_user.follow(params[:user_id])とすることで
+    # 「follower_id: current_user.id」を代入しながらインスタンスを作成
     redirect_to request.referer
   end
 
