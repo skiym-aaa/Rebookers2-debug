@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+
+  devise_for :users, :controllers => {
+    :registrations => 'users/registrations'
+   }
+
+  # letter_opener用のルーティング
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
+
   root 'home#top'
   get 'home/about' => 'home#about'
   get '/search', to: 'search#search'

@@ -33,3 +33,5 @@
 .env
 
 vendor/bundle/ruby/2.5.0/bundler/gems/refile-46b4178654e6
+
+config/initializers/mail.rb
