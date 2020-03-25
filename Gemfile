@@ -78,5 +78,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 # Add jp_prefecture
 gem 'jp_prefecture'
+# Add dotenv-rails
+gem 'dotenv-rails'
 
 
