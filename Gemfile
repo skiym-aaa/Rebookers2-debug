@@ -85,5 +85,10 @@ gem 'jp_prefecture'
 # Add dotenv-rails
 gem 'dotenv-rails'
 
+# Mysqlを使用するのに必要
+group :production do
+  gem 'mysql2'
+end
+
 
 

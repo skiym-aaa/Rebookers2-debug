@@ -30,7 +30,7 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-.env
+/.env
 
 vendor/bundle/ruby/2.5.0/bundler/gems/refile-46b4178654e6
 
